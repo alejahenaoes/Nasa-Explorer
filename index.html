@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA</title>
+    <style>
+        .buttons{
+            display: flex;
+            justify-content: flex-end;
+        }
+        button{
+            border: none;
+            border-radius: 5px;
+            padding: 4px;
+            margin: 10px;
+            background-color: #fdfd96;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-image: url(https://blenderartists.org/uploads/default/original/4X/7/e/2/7e2d7bea4ac21388c4a96e1371f375c4ce00094b.jpg);
+        }
+        .titleMain, .logo{
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .titleSection{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            font-size: 40px;
+        }
+        .paragraph, .date{
+            font-size: 25px;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .imgTitle{
+            font-size: 30px;
+            color: thistle;
+        }
+    </style>
+</head>
+<body>
+    <section class="buttons">
+        <button class="button" href="#" onclick="changeBodyBg('rgb(213, 200, 240)','#000');">Light Mode</button>
+        <button class="button" href="#" id="changeBack">Change Background</button>
+    </section>
+    <header>
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/574px-NASA_logo.svg.png" height="80px" alt="NASA_logo">
+        </div>
+        <div class="titleMain">
+            <a href="https://www.nasa.gov/"><img id="logo" src="https://fontmeme.com/permalink/210304/728a35fe9990a31be372ffbaef61e043.png" alt="nasa-font"></a>
+        </div>
+    </header>
+    <section>
+        <h1 class="titleSection" id="titleMain">Picture of the day</h1>
+        <p id="date" class="date"></p>
+        <h2 id="search"></h2>
+        <button class="button" id="searchButton">Explore the picture of the day</button>
+    </section>
+    <section class="resultados">
+        <h1 id="results" class="imgTitle">
+        </h1>
+        <div class="paragraph" id="explicacion">
+            <p id="newExp"></p>
+        </div>
+    </section>
+    <script src="./nasa.js"></script>
+</body>
+</html>
